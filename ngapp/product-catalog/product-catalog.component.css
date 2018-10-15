@@ -1,0 +1,13 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.wrapper {
+    width: 300px;
+    border: 1px grey solid; 
+    padding: 5px 5px 5px 5px;
+}
+.tooltip{
+    width:100px;
+    height:100px;
+    border: 1px black solid;
+    padding: 5px 5px 5px 5px;
+}

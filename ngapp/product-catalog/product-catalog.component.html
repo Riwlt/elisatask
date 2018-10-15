@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form, product)" >
+
+    <!-- Product -->
+    <div class="form-group">
+      <label for="product">Product</label>
+      <select class="form-control input-sm" #product>
+        <option *ngFor="let p of products" [value]="p.id">{{p.productName}} - {{p.price.oneTimePrice}}€</option>
+      </select>
+    </div>
+    <!-- Customer -->
+    <div class="form-group">
+      <label for="customer_name">First and last name</label>
+      <input type="text" class="form-control" name="customerName" [(ngModel)]="customer.customerName" required>
+    </div>
+    <!-- Company -->
+    <div class="form-group">
+      <label>Company</label>
+      <input type="text" class="form-control" name="companyName" [(ngModel)]="customer.companyName" required>
+    </div>
+    <!-- Street -->
+    <div class="form-group">
+      <label>Country</label>
+      <input type="text" class="form-control" name="country" [(ngModel)]="customer.country" required>
+    </div>
+    <!-- Country -->
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" class="form-control" name="city" [(ngModel)]="customer.city" required>
+    </div>
+    <!-- Postal Code -->
+    <div class="form-group">
+      <label>Street</label>
+      <input type="text" class="form-control" name="street" [(ngModel)]="customer.street" required>
+    </div>
+    <!-- City -->
+    <div class="form-group">
+      <label>Postal Code</label>
+      <input type="number" class="form-control" name="postalCode" [(ngModel)]="customer.postalCode" required>
+    </div>
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+    <!-- -->
+  </form>
+</div>
